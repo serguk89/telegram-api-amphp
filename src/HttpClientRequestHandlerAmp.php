@@ -12,24 +12,6 @@ use React\Promise\PromiseInterface;
 use unreal4u\TelegramAPI\Exceptions\ClientException;
 use unreal4u\TelegramAPI\InternalFunctionality\TelegramResponse;
 
-/**
- * @param Promise $promise
- * @return \React\Promise\PromiseInterface
- */
-function reactAdapt(Promise $promise) {
-    $deferred = new \React\Promise\Deferred();
-
-    $promise->onResolve(function ($error = null, $result = null) use ($deferred) {
-        if ($error) {
-            $deferred->reject($error);
-        } else {
-            $deferred->resolve($result);
-        }
-    });
-
-    return $deferred->promise();
-}
-
 class HttpClientRequestHandlerAmp implements RequestHandlerInterface {
 
     /**
@@ -76,7 +58,7 @@ class HttpClientRequestHandlerAmp implements RequestHandlerInterface {
      * @return PromiseInterface
      */
     private function processRequest(Request $request) {
-        return reactAdapt(\Amp\call(function () use ($request) {
+        return \Interop\React\Promise\adapt(\Amp\call(function () use ($request) {
             /** @var Response $response */
             $response = yield $this->client->request($request);
 

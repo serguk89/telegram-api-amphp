@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "77aad828986bc74f3710a5885e0b26e5",
+    "content-hash": "06c6365b5e62bac3211d9e3758df9cb8",
     "packages": [
         {
             "name": "amphp/amp",
@@ -880,6 +880,37 @@
                 "promises"
             ],
             "time": "2017-03-25T12:08:31+00:00"
+        },
+        {
+            "name": "umbri/amp-react-interop",
+            "version": "0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/umbri/amp-react-interop.git",
+                "reference": "07bd8b24ca26c967b577dfb3977130bf426cd003"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/umbri/amp-react-interop/zipball/07bd8b24ca26c967b577dfb3977130bf426cd003",
+                "reference": "07bd8b24ca26c967b577dfb3977130bf426cd003",
+                "shasum": ""
+            },
+            "require": {
+                "amphp/amp": "^2",
+                "php": ">=7.0",
+                "react/promise": "^2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "lib/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "time": "2017-09-09T21:39:35+00:00"
         }
     ],
     "packages-dev": [
