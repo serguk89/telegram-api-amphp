@@ -16,7 +16,8 @@
   "require": {
     "php": ">=7.0.0",
     "psr/log": "^1.0",
-    "amphp/artax": "^3"
+    "amphp/artax": "^3",
+    "react/promise": "*"
   },
   "require-dev": {
     "monolog/monolog": "^1.17",
