@@ -78,7 +78,7 @@ class TgLog
      *
      * @param TelegramMethods $method
      *
-     * @return PromiseInterface
+     * @return PromiseInterface<Message>
      * @throws \unreal4u\TelegramAPI\Exceptions\MissingMandatoryField
      */
     public function performApiRequest(TelegramMethods $method): PromiseInterface
